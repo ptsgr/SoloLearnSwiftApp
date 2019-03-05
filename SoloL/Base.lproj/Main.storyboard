@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SoloL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="kcT-e1-i2a">
+                                <rect key="frame" x="0.0" y="80" width="375" height="187"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AH8-Ot-WbH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a25-Vd-exQ">
+                                        <rect key="frame" x="0.0" y="66" width="375" height="30"/>
+                                        <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <action selector="setName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4N-CN-ewb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-fO-qxy">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a25-Vd-exQ" firstAttribute="leading" secondItem="kcT-e1-i2a" secondAttribute="leading" id="1oi-Bu-y6r"/>
+                                    <constraint firstAttribute="trailing" secondItem="a25-Vd-exQ" secondAttribute="trailing" id="Qkf-lc-g8k"/>
+                                    <constraint firstItem="9MM-fO-qxy" firstAttribute="leading" secondItem="kcT-e1-i2a" secondAttribute="leading" id="bax-BN-Omd"/>
+                                    <constraint firstItem="AH8-Ot-WbH" firstAttribute="leading" secondItem="kcT-e1-i2a" secondAttribute="leading" id="iv2-8r-Nll"/>
+                                </constraints>
+                            </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkA-G8-r0r">
+                                <rect key="frame" x="164" y="318" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kcT-e1-i2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5e8-WU-zqU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcT-e1-i2a" secondAttribute="trailing" id="9kO-3y-AFe"/>
+                            <constraint firstItem="kcT-e1-i2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UZQ-87-bMx"/>
+                            <constraint firstItem="kcT-e1-i2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UfE-3x-0He"/>
+                            <constraint firstItem="kcT-e1-i2a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="jMH-zK-piv"/>
+                            <constraint firstItem="kcT-e1-i2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m26-Ia-CJw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="9MM-fO-qxy" id="uw7-Yk-mFI"/>
+                        <outlet property="nameTextField" destination="AH8-Ot-WbH" id="MLT-0j-rio"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
