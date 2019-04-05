@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     @IBAction func setName(_ sender: UIButton) {
         nameLabel.text = nameTextField.text
     }
-    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
